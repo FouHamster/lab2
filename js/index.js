@@ -16,17 +16,24 @@ function UserPhone(surname, name, middleName, tel, postalCode, country, city, st
 let user = []
 
 function createNewUser () {
-    let surname = document.getElementById('surname').value 
-    let name = document.getElementById('name').value
-    let middleName = document.getElementById('middleName').value
-    let tel = document.getElementById('tel').value
-    let postalCode = document.getElementById('postalCode').value
-    let country = document.getElementById('country').value
-    let city = document.getElementById('city').value
-    let street = document.getElementById('street').value
-    let house = document.getElementById('house').value
-    let apartment = document.getElementById('apartment').value
+    // let surname = document.getElementById('surname').value 
+    // let name = document.getElementById('name').value
+    // let middleName = document.getElementById('middleName').value
+    // let tel = document.getElementById('tel').value
+    // let postalCode = document.getElementById('postalCode').value
+    // let country = document.getElementById('country').value
+    // let city = document.getElementById('city').value
+    // let street = document.getElementById('street').value
+    // let house = document.getElementById('house').value
+    // let apartment = document.getElementById('apartment').value
+    let surname = prompt('Введите имя!')
+
+    let users = new UserPhone(surname, name, middleName, tel, postalCode, country, city, street, house, apartment)
+    user.push(users)
+    console.log(users)
 }
+
+
 
 function getViewArray() {
     let viewSortResult = document.getElementById('viewSortResult')
