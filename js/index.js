@@ -26,7 +26,16 @@ function createNewUser () {
     // let street = document.getElementById('street').value
     // let house = document.getElementById('house').value
     // let apartment = document.getElementById('apartment').value
-    let surname = prompt('Введите имя!')
+    let surname = prompt('Введите фамилию!')
+    let name = prompt('Введите имя!')
+    let middleName = prompt('Введите отчество!')
+    let tel = prompt('Введите номер телефона!')
+    let postalCode = prompt('Введите индекс!')
+    let country = prompt('Введите страну!')
+    let city = prompt('Введите город!')
+    let street = prompt('Введите улицу!')
+    let house = prompt('Введите дом!')
+    let apartment = prompt('Введите квартиру!')
 
     let users = new UserPhone(surname, name, middleName, tel, postalCode, country, city, street, house, apartment)
     user.push(users)
@@ -35,38 +44,3 @@ function createNewUser () {
 
 
 
-function getViewArray() {
-    let viewSortResult = document.getElementById('viewSortResult')
-    viewSortResult.setAttribute('style', 'display: none')
-
-    let viewSearchResult = document.getElementById('viewSearchResult')
-    viewSearchResult.setAttribute('style', 'display: none')
-
-    let search = document.getElementById('search')
-    search.setAttribute('style', 'display: none')
-
-    let sort = document.getElementById('sort')
-    sort.setAttribute('style', 'display: none')
-
-    let viewUser = document.getElementById('viewUser')
-    viewUser.setAttribute('style', 'display: flex')
-
-    let container = document.getElementById("viewUser")
-    container.innerHTML = "";
-
-    for(let i in users) {
-
-        let user = users[i]
-        let p = document.createElement("p")
-
-        p.innerHTML = `<b>Название:</b> ${book.title},
-                       &nbsp &nbsp &nbsp &nbsp <b>Автор:</b> ${book.author},
-                       &nbsp &nbsp &nbsp &nbsp <b>Год выхода:</b> ${book.year_release}, 
-                       &nbsp &nbsp &nbsp &nbsp <b>Издательство:</b> ${book.publisher},
-                       &nbsp &nbsp &nbsp &nbsp <b>Себестоимость:</b> ${book.cost}, 
-                       &nbsp &nbsp &nbsp &nbsp <b>Цена:</b> ${book.price},
-                       &nbsp &nbsp &nbsp &nbsp <b>Прибыль:</b> ${book.profit} <hr>`
-
-        container.appendChild(p);   
-    }
-}
