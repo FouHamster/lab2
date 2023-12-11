@@ -36,5 +36,27 @@ function createNewUser () {
     }
 }
 
+function getSimilarity() {
+    let userRequest = prompt('Что вы хотите найти?', '')
+    let isFind = false;
+    for (let i in user) {
+        for (let key in user[i]) {
+            if (typeof user[i][key] === 'object') {
+                for (let nested_key in user[i][key]){
+                    if (userRequest === user[i][key][nested_key])
+                        console.log(user[i])
+                    console.log(user[i][nested_key])
+                    isFind = true
+                }
+            } else if (userRequest === user[i][key]) {
+                console.log(user[i])
+                isFind = true
+            }
+        }
+    }
+    if (!isFind) {
+        console.log('Такого поле нет.Введите конкретное поле без ошибок')
+    }
+}
 
 
