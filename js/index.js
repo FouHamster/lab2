@@ -59,4 +59,25 @@ function getSimilarity() {
     }
 }
 
-
+// function sortUsersByAttribute() {
+//     // Check if the attribute is valid
+//     let attribute = 'surname'
+//     console.log(attribute)
+//     if (!UserPhone.prototype.hasOwnProperty(attribute)) {
+//         console.log('Неверный атрибут. Введите корректный атрибут пользователя.');
+//         return;
+//     }
+//
+//     // Sort the user array based on the specified attribute
+//     user.sort((a, b) => {
+//         if (typeof a[attribute] === 'object') {
+//             return a[attribute].toString().localeCompare(b[attribute].toString());
+//         } else {
+//             return a[attribute].toString().localeCompare(b[attribute].toString());
+//         }
+//     });
+//
+//     // Display the sorted user array
+//     console.log('Отсортированные пользователи по атрибуту ' + attribute + ':');
+//     user.forEach(u => console.log(u));
+// }
