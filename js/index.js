@@ -1,40 +1,23 @@
-class UserPhone {
-    lastName
-    firstName
-    middleName
-    tel
-    address
-    
-
-    constructor(lastName, firstName, middleName, tel, postalCode, country, city, street, house, apartment) {
-        this.lastName = lastName
-        this.firstName = firstName
-        this.middleName = middleName
-        this.tel = tel
-        this.address = new Address(postalCode, country, city, street, house, apartment)
-    }
+function UserPhone(lastName, firstName, middleName, tel, postalCode, country, city, street, house, apartment) {
+    this.lastName = lastName;
+    this.firstName = firstName;
+    this.middleName = middleName;
+    this.tel = tel;
+    this.address = new Address(postalCode, country, city, street, house, apartment);
 }
 
-class Address{
-    postalCode 
-    country
-    city
-    street
-    house
-    apartment
-    constructor(postalCode, country, city, street, house, apartment) {
-        this.postalCode = postalCode
-        this.country = country
-        this.city = city
-        this.street = street
-        this.house = house
-        this.apartment = apartment
-    }
+function Address(postalCode, country, city, street, house, apartment) {
+    this.postalCode = postalCode;
+    this.country = country;
+    this.city = city;
+    this.street = street;
+    this.house = house;
+    this.apartment = apartment;
 }
 
 let user = []
 
-function createNewUser () {
+function сreateNewUser () {
     let question = confirm('Хотите продолжить?')
     while (question !== false) {
         let lastName = prompt('Введите фамилию!')
